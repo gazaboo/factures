@@ -1,0 +1,54 @@
+body {
+    margin:2em;
+}
+
+em {
+    font-size: xx-large;
+}
+
+ul {
+    list-style-type:none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    padding: 0;
+}
+
+.right li {
+    text-align: right;
+}
+
+.left li {
+    text-align: left;
+}
+
+img{
+    display: block;
+}
+
+.signature {
+    display:flex;
+    justify-content: end;
+}
+
+.tva {
+    text-align: right;
+}
+
+.rib {
+    margin-top: 5em;
+}
+
+.objet {
+    margin-bottom: 1em;
+    font-size: larger;
+}
+
+.scic {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

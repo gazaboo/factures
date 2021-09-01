@@ -1,0 +1,20 @@
+{
+    "WEB&APPLI 2021":{
+        "Algorithmique avancée":{ 
+            "dates":{
+                "Mars 2021":[22,23,24,26,30,31],
+                "Avril 2021":[1,7,8]
+            },
+            "nbre_jours_prepa":0.5
+        }
+    },
+    "WEB 2021":{
+        "Java":{
+            "dates":{
+                "Mars 2021":[19, 19, 19, 19, 19, 19, 19, 19, 25,29],
+                "Avril 2021":[2]
+            },
+            "nbre_jours_prepa":0.9
+        }
+    }
+}
