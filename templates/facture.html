@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="d-flex justify-content-center navbar navbar-light bg-light">
+        <form class="form-inline" action="/index">
+          <button class="btn btn-outline-success" type="submit">Nouvelle Facture</button>
+          <button class="btn btn-outline-success" type="submit">Modifier Facture</button>
+          <input type="hidden" name="organisme" value= {{ data }} >
+          <input type="hidden" name="nom_cours" value= {{ data.nom_module }} >
+          <input type="hidden" name="dates" value= {{ data.date_cours }} >
+          <input type="hidden" name="nbre_jours_prepa" value= {{ data.nbre_jour_prepa }} >
+        </form>
+      </nav>
+    <div class="d-flex justify-content-center">
+      <iframe class="pdf" src="{{ url_for('static', filename='rendered/out.pdf') }}"></iframe>
+    </div>
+
+</body>
+</html>
