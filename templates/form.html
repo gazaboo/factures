@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Générateur de facture</h1>
+    <div class="formulaire">
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Organisme à facturer : </label>
+                 <select name="organisme" class="form-select" size="2">
+                    <option selected value="Campus">Campus Numérique In The Alps</option>
+                    <option value="Handigital">Handigital</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Nom du cours : </label>
+                <input type="text" class="form-control" name="nom_cours" id="formGroupExampleInput2" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Dates : </label>
+                <input type="text" class="form-control date" name="dates" id="formGroupExampleInput3" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Nombre de jours de préparation : </label>
+                <input type="text" class="form-control" name="nbre_jours_prepa" id="formGroupExampleInput4" placeholder="..." required>
+            </div>            
+            <button type="submit" class="btn btn-primary">Générer facture</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

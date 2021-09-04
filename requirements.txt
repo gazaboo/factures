@@ -2,3 +2,5 @@ flask
 jinja2
 pdfkit
 wkhtmltopdf
+gunicorn
+flask-login
