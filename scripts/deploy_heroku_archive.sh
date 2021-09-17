@@ -1,3 +1,6 @@
+# Archive
+# Valable quand on déploie avec un Dockerfile (à la place du heroku.yml)
+
 echo "---------------------------------"
 echo "deploy script --> login to heroku"
 echo "-------------------------------- "
@@ -13,10 +16,10 @@ echo -e "\n"
 echo "----------------------------------------------"
 echo "deploy script --> pushing container to heroku"
 echo "----------------------------------------------"
-heroku stack:set container
+sudo heroku container:push web
 
 echo -e "\n"
 echo "--------------------------------"
 echo "deploy script --> release app..."
 echo "--------------------------------"
-git push heroku master
+heroku container:release web

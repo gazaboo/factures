@@ -1,4 +1,5 @@
 import datetime as dt
+from random import randint
 
 def get_info(req):
     data = {
@@ -10,7 +11,8 @@ def get_info(req):
         "date_emission_facture":dt.datetime.today().strftime("%d-%m-%Y"),
         "qte": len(req.get("dates").split(",")),
         "nbre_jour_prepa": int(req.get("nbre_jours_prepa")), 
-        "webbrowser":True
+        "webbrowser": True, 
+        "num_facture": dt.datetime.today().strftime("%M%S%f")
     }
     data["prix_preparation"] = data['nbre_jour_prepa']*data['prix_journalier']
     data["prix_total_animation"] = len(data["date_cours"])*data['prix_journalier']

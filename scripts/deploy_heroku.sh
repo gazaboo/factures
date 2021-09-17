@@ -1,3 +1,5 @@
+# Deployer sur Heroku en utilisant un heroku.yml
+
 echo "---------------------------------"
 echo "deploy script --> login to heroku"
 echo "-------------------------------- "
@@ -13,10 +15,10 @@ echo -e "\n"
 echo "----------------------------------------------"
 echo "deploy script --> pushing container to heroku"
 echo "----------------------------------------------"
-sudo heroku container:push web
+heroku stack:set container
 
 echo -e "\n"
 echo "--------------------------------"
 echo "deploy script --> release app..."
 echo "--------------------------------"
-heroku container:release web
+git push heroku master

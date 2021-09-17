@@ -9,7 +9,7 @@
     <title>Factures</title>
 </head>
 <body>
-    {% if data.webbrowser == True %} - 
+    {% if data.webbrowser == True %} 
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
           <button class="btn btn-outline-success" type="button">Nouvelle Facture</button>
@@ -30,12 +30,13 @@
         </div>
         <div class="col-6 ">
             <ul class="right">
-                <li>Date : {{data.date_emission_facture}}</li>
+                <li>Date : {{ data.date_emission_facture }}</li>
+                <li>Facture N° : {{ data.num_facture }}</li>
             </ul>
         </div>    
     </div>
 
-    {% if data.organisme == "Campus" %} - 
+    {% if data.organisme == "Campus" %} 
     <div class="row scic">
       <div class="col-6"></div>
       <ul class="col-6 right">
