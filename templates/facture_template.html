@@ -82,22 +82,22 @@
                         <ul>
                             {% for date in data.date_cours %}
                                 {{ date }}
-                                {% if loop.index < data.date_cours|length %} - 
+                                {% if loop.index < data.date_cours|length %} 
                                 {% endif %}
                             {% endfor %}
                         </ul>
                     </td>
                     <td>{{data.qte}}</td>
-                    <td>{{data.prix_journalier}}</td>
-                    <td>{{data.prix_total_animation}}</td>
+                    <td>{{data.prix_journalier}}€</td>
+                    <td>{{data.prix_total_animation}}€</td>
                   </tr>
-                  {% if data.nbre_jour_prepa > 0 %} - 
+                  {% if data.nbre_jour_prepa > 0 %} 
                   <tr>
                     <th scope="row">2</th>
                     <td>Préparation module {{data.nom_module}}</td>
                     <td>{{data.nbre_jour_prepa}}</td>
-                    <td>{{data.prix_journalier}}</td>
-                    <td>{{data.prix_preparation}}</td>
+                    <td>{{data.prix_journalier}}€</td>
+                    <td>{{data.prix_preparation}}€</td>
                   </tr>
                   {% endif %}
                 </tbody>
@@ -113,11 +113,11 @@
                 <tbody>
                   <tr>
                     <th scope="row">TOTAL HT</th>
-                    <td>{{data.prix_total}}</td>
+                    <td>{{data.prix_total}}€ </td>
                   </tr>
                   <tr>
                     <th scope="row">NET A PAYER</th>
-                    <td>{{data.prix_total}}</td>
+                    <td>{{data.prix_total}}€</td>
                   </tr>
                   <tr>
                 </tbody>

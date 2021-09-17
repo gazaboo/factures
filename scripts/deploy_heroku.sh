@@ -21,4 +21,4 @@ echo -e "\n"
 echo "--------------------------------"
 echo "deploy script --> release app..."
 echo "--------------------------------"
-git push heroku master
+git push heroku main
