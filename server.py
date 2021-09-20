@@ -7,11 +7,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
+# @app.route("/")
+# def index():
+#     return render_template("index.html")
 
-@app.route("/form")
+@app.route("/")
 def form():
     return render_template("form.html")
 
@@ -19,8 +19,7 @@ def form():
 def submit_facture():
     infos = get_info(request.form)
     output = render_template("facture_template.html", data=infos)
-    name = f'fdadouchi_facture_{infos["nom_promotion"]}_{infos["nom_module"]}'
-    pdfkit.from_string(output, f'static/rendered/{name}.pdf', css= 'static/style.css',)     
+    pdfkit.from_string(output, f'static/rendered/fdadouchi_facture.pdf', css= 'static/style.css',)     
     return render_template("facture.html", data=infos)
 
 if __name__ == '__main__':
