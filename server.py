@@ -19,8 +19,9 @@ def form():
 def submit_facture():
     infos = get_info(request.form)
     output = render_template("facture_template.html", data=infos)
-    pdfkit.from_string(output, 'static/rendered/out.pdf', css= 'static/style.css',)     
+    name = f'fdadouchi_facture_{infos.nom_promotion}_{infos.nom_module}'
+    pdfkit.from_string(output, f'static/rendered/{name}.pdf', css= 'static/style.css',)     
     return render_template("facture.html", data=infos)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)), debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
