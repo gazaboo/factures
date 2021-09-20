@@ -18,6 +18,7 @@ def form():
 @app.route('/submit', methods=['POST'])
 def submit_facture():
     infos = get_info(request.form)
+    print(infos)
     output = render_template("facture_template.html", data=infos)
     name = f'fdadouchi_facture_{infos.nom_promotion}_{infos.nom_module}'
     pdfkit.from_string(output, f'static/rendered/{name}.pdf', css= 'static/style.css',)     
