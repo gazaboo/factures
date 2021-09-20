@@ -19,7 +19,7 @@ def form():
 def submit_facture():
     infos = get_info(request.form)
     output = render_template("facture_template.html", data=infos)
-    pdfkit.from_string(output, 'static/rendered/fdadouchi_facture.pdf', css= 'static/style.css',)     
+    pdfkit.from_string(output, "static/rendered/fdadouchi_facture.pdf", css= 'static/style.css',)     
     return render_template("facture.html", data=infos)
 
 if __name__ == '__main__':
