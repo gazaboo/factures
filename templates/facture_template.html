@@ -50,7 +50,7 @@
 
     <div class="row objet">
         <div class="col-12">
-            <b>Objet : Facturation Interventions Module "{{data.nom_module}}"</b>
+            <b>Objet : Facturation Interventions Module "{{data.nom_module}}", promotion {{data.nom_promotion}}</b>
         </div> 
     </div>
 
@@ -82,8 +82,8 @@
                         <ul>
                             {% for date in data.date_cours %}
                                 {{ date }}
-                                {% if loop.index < data.date_cours|length %} 
-                                {% endif %}
+                                <!-- {% if loop.index < data.date_cours|length %} 
+                                {% endif %} -->
                             {% endfor %}
                         </ul>
                     </td>
